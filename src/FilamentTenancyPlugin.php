@@ -44,7 +44,7 @@ class FilamentTenancyPlugin implements Plugin
         if($this->isActive) {
             $panel
                 ->resources([
-                    TenantResource::class
+                    config('filament-tenancy.resource.tenant')
                 ])
                 ->middleware([
                     RedirectIfInertiaMiddleware::class,
